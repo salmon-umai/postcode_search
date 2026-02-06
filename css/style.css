@@ -36,11 +36,19 @@ header h1 {
 }
 
 #pref_sel {
+
     width: 500px;
     height: 20px;
     margin-bottom: 5px;
     margin-right: 10px;
     background-color: #ffffff;
+}
+label {
+    font-size: 17px;
+}
+select,
+input[type=text] {
+    font-size: 14px;
 }
 
 .title {
@@ -63,6 +71,7 @@ header h1 {
     margin-right: 0;
     border-bottom: 3px solid #cc0000;
     width: 800px;
+    font-size: 20px;
 }
 
 #title_All {
@@ -139,8 +148,8 @@ span {
     padding: 5px 10px;
     font-size: 12px;
     cursor: pointer;
-    background: #dfdfdf;
-    color: #cc0000;
+    background: #adadad;
+    color: #520808;
     border-right: 1px solid #cc0000;
     transition: all 0.2s ease;
     line-height: 1;
