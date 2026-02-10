@@ -1,135 +1,69 @@
 @charset "UTF-8";
-html, body {
-    height: 100%;
-}
-
 body {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    /*
-    font-family: "Klee One", sans-serif;
-    */
 }
-
 header h1 {
-    color: #ffffff;
-    background-color: #cc0000;
-    margin: 0 auto 10px auto;
+    margin: 0px auto 20px auto;
     padding: 10px;
     text-align: center;
+    background-color: #cc0000;
+    color: #fff;
+}
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #select_All {
-    text-align: center;
-    /*
-    background-color: #f4eeee;
-    */
-    width: 600px;
-    margin: auto;
-    /*border: 1px solid #cc0000;*/
-}
-
-#select {
-    margin-top: 30px;
-}
-
-#pref_sel {
-
-    width: 500px;
-    height: 20px;
-    margin-bottom: 5px;
-    margin-right: 10px;
-    background-color: #ffffff;
-}
-label {
-    font-size: 17px;
-}
-select,
-input[type=text] {
-    font-size: 14px;
-}
-
-.title {
-    margin-bottom: 0;
-    display: inline-block;
-    /*
-    padding: 5px 5px;
-    background-color: #cc0000;
-    color: #ffffff;
-    border-radius: 5px;
-    */
-    font-size: large;
-    color: #cc0000;
-    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #kensaku {
-    text-align: left;
     padding-left: 20px;
-    margin-right: 0;
-    border-bottom: 3px solid #cc0000;
-    width: 800px;
-    font-size: 20px;
-}
-
-#title_All {
-    display: flex;
-    align-items: center;
-    height: 40px;
-}
-
-#pref_sel_All {
-    display: flex;
+    color: #cc0000;
+    border-bottom: 2px solid #cc0000;
     margin-bottom: 10px;
-    margin-top: 5px;
-    justify-content: center;
-    align-items: center;
-}
+    max-width: 600px;
+    width: 100%;
 
-#pref_sel {
-    justify-content: center;
-    margin-bottom: 0;
-    margin-right: 5px;
-    height: 30px;
 }
 span {
     font-size: 12px;
     color: red;
 }
-#label_edit {
-    text-align: left;
-    font-size: 14px;
+#pref_sel {
+    margin-bottom: 5px;
+    background-color: #ffffff;
+}
+label,
+select,
+input[type=text] {
+    font-size: 13px;
 }
 
-#pref_block {
-    display: block;
-}
-#form_group {
-    width: 500px;
-    margin: 0 auto;
-    font-size: 14px;
-}
-
-.form_item {
+#select {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+#pref_sel,
+#post_code,
+#search_keyword {
+    width: 400px;
     margin-bottom: 10px;
-}
-
-.form_item label {
-    text-align: left;
-}
-
-.form_item input {
-    height: 30px;
-}
+    height: 25px;
+  }
 
 /*ラジオボタンの装飾*/
 #mode {
-    margin-left: 45px;
     display: inline-flex;
     border: 2px solid #cc0000;
     border-radius: 6px;
@@ -160,13 +94,8 @@ span {
     color: #fff;
 }
 /*ラジオボタンの装飾　END*/
-#mode_block {
-    display: flex;
-    align-items: center;
-    gap: 120px;
-}
-
 #btn_All {
+    position: relative;
     font-size: 15px;
     color: #ffffff;
     padding: 10px 60px;
@@ -189,15 +118,33 @@ span {
 }
 
 #btn_edit {
-    display: flex;
     gap: 15px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#not_found {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+#content {
+    flex: 1;
+}
+
+#result_table {
+    margin: 0;
 }
 
 #map_area {
-    width: 700px;
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
     height: 300px;
-    margin: 20px auto 10px auto;
+    margin-top: 10px;
     display: none;
 }
 
@@ -211,10 +158,9 @@ table {
     display: none;
     border-collapse: collapse;
     /*二重線が消える*/
-    margin: auto;
     background-color: #ffffff;
     margin-bottom: 50px;
-    width: 700px;
+    width: 100%;
 }
 
 caption {
@@ -228,17 +174,17 @@ th,
 td {
     border: 1px solid #000000;
     padding: 2px 5px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 th {
     color: #ffffff;
 }
 .th_width {
-    width: 90px;
+    max-width: 90px;
 }
 .th_width2 {
-    width: 110px;
+    max-width: 140px;
 }
 
 thead {
@@ -252,8 +198,9 @@ table tbody tr:hover {
 }
 
 #furigana {
-    font-size: 13px;
+    font-size: 11px;
 }
+
 
 /*ページトップボタン　参考サイト：https://animate-club.com/button/page-top/*/
 .container {
@@ -312,19 +259,13 @@ button.is-active {
 }
 /*ページトップボタンEND*/
 
-#not_found {
-    color: red;
-    font-weight: bold;
-    text-align: center;
-}
-
-#content {
-    flex: 1;
-}
-
-#footer_area {
-    background-color: #cc0000;
-    width: 100%;
-    text-align: center;
-    height: 30px;
+@media(max-width:420px) {
+    .page {
+        width: 100%;
+    }
+    #pref_sel,
+    #post_code,
+    #search_keyword {
+    max-width: 300px;
+  }
 }
